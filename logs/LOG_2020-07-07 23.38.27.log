@@ -1,0 +1,83 @@
+2020-07-07 23:38:38.615 INFO  jforex.tester.client.gui.TesterClientRunner - Connecting...
+2020-07-07 23:38:39.626 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - environment(jnlp.client.mode)=DEMO, platformInstanceId=null
+2020-07-07 23:38:39.654 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - Auth step 1 request [C7CB965721297B9673000E91D5285CC93C616A83]
+2020-07-07 23:38:39.658 DEBUG com.dukascopy.api.impl.connect.AuthorizationClient - >> [https://login.dukascopy.com/authorization-1/demo/auth?munus=srp_api&passus=1&sermo=78614935-b91b-4f45-99b6-eddf8d7ebe91&putent_genus=0&appello=C7CB965721297B9673000E91D5285CC93C616A83&obsecro_id=fc4d4643-8fe6-4f8f-8d62-73107ddc29d9&srp_versio=1]
+2020-07-07 23:38:41.753 DEBUG com.dukascopy.api.impl.connect.AuthorizationClient - << [{"B":"942e3e242ea0be0d1b49b90f96d6ee311561683cbc5b52a79a486348587f388b73b76df7ca7e848fe3ac06d987322a08f424f92021f37ae4a4cbed08cedd081f7e46e252b4e35001195d204684faa60f877b938b3b6b0dea15675739b3e595deeb746726ce04563c5067aa508cb9221dfeca640a601aafc56668ae43437c3a9b3c5508169a39a05ffb008a40e8b35088451a598ab42fe70e7fe6e13a9e29fe69b897451e017536ac6574dc7551b62fe966a197678cea2c02adfcbf064f93fc14052d81895d4a7760d9fb3643a32e9bc2aae6992502bdb6a526fabb24b4aa1bdd455cb0b1272bd2cf0056f9a836a63e5fd26713760b7231a1a515c5f576986935","S":"511e38283f03521157c897a3c65ca79d","G":"2","H":"SHA-256","K":"5b9e8ef059c6b32ea59fc1d322d37f04aa30bae5aa9003b8321e21ddb04e300","N":"ac6bdb41324a9a9bf166de5e1389582faf72b6651987ee07fc3192943db56050a37329cbb4a099ed8193e0757767a13dd52312ab4b03310dcd7f48a9da04fd50e8083969edb767b0cf6095179a163ab3661a05fbd5faaae82918a9962f0b93b855f97993ec975eeaa80d740adbf4ff747359d041d5c33ea71d281e446b14773bca97b43a23fb801676bd207a436c6481f1d2b9078717461a5b9d32e688f87748544523b524b0d57d5ea77a2775d2ecfa032cfbdbf52fb3786160279004e57ae6af874e7303ce53299ccc041c7bc308d82a5698f3a8d0c38271ae35f8e9dbfbb694b5c803d89f7ae435de236d525f54759b65e372fcd68ef20fa7111f9e4aff73","srp_versio":"1"}]
+2020-07-07 23:38:41.755 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - Auth step 1 response [ServerResponseObject [passwordServerResponse=Step1ServerResponse [serverPublicValueB=942e3e242ea0be0d1b49b90f96d6ee311561683cbc5b52a79a486348587f388b73b76df7ca7e848fe3ac06d987322a08f424f92021f37ae4a4cbed08cedd081f7e46e252b4e35001195d204684faa60f877b938b3b6b0dea15675739b3e595deeb746726ce04563c5067aa508cb9221dfeca640a601aafc56668ae43437c3a9b3c5508169a39a05ffb008a40e8b35088451a598ab42fe70e7fe6e13a9e29fe69b897451e017536ac6574dc7551b62fe966a197678cea2c02adfcbf064f93fc14052d81895d4a7760d9fb3643a32e9bc2aae6992502bdb6a526fabb24b4aa1bdd455cb0b1272bd2cf0056f9a836a63e5fd26713760b7231a1a515c5f576986935, saltS=511e38283f03521157c897a3c65ca79d, safePrimeN=ac6bdb41324a9a9bf166de5e1389582faf72b6651987ee07fc3192943db56050a37329cbb4a099ed8193e0757767a13dd52312ab4b03310dcd7f48a9da04fd50e8083969edb767b0cf6095179a163ab3661a05fbd5faaae82918a9962f0b93b855f97993ec975eeaa80d740adbf4ff747359d041d5c33ea71d281e446b14773bca97b43a23fb801676bd207a436c6481f1d2b9078717461a5b9d32e688f87748544523b524b0d57d5ea77a2775d2ecfa032cfbdbf52fb3786160279004e57ae6af874e7303ce53299ccc041c7bc308d82a5698f3a8d0c38271ae35f8e9dbfbb694b5c803d89f7ae435de236d525f54759b65e372fcd68ef20fa7111f9e4aff73, correspondingGeneratorG=2, hashAlgorithmH=SHA-256, srpProtocolVersion=1], ]]
+2020-07-07 23:38:41.844 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - Auth step 2 request A [1511705646104533810072145608536115312629965606665660492145753939744525188368211361074100991746971222309960539686934367361602441700333437629400031167486339173640046174860230204188719711593367928077576819998210417820795962710560061857624232005983188203836472336343153810828489357636599524985640911621826794709663757607965917754927905664428224509026405927858583722386422469690209655411271943716894426376665657012887468456835464937728795949104422736427839993505180128605187406811880968583408606700875395484915974794416826863773153057549328765978854399771606099564452082495393699052720468604932278935316862621235358120864], M1 [114858962295112367102744250637369289724192315231174619219694199343322228842829]
+2020-07-07 23:38:41.845 DEBUG com.dukascopy.api.impl.connect.AuthorizationClient - >> [https://login.dukascopy.com/authorization-1/demo/auth?munus=srp_api&testimonium_nuntius=fdefde6e10e8ec940f85995e43d701863e81929023eb0d68b4297aa6fcc3e14d&passus=2&publicus_pendo=bf99a9bfa5842278c7e5d107f82a55f8bed3668c1c5bd9b04ab5e511ac867ecd6880049412d346f49d23a6d4df1484f460376fa5bc5a0d60dae477dd18ddc92c8895ad5302236a10c55efddabf7312f22fd990062e31ccac1c547b3f3fc03245e42030c93a1734fc2aa20ab3266be989419a52a1e6a90b7fd95daa373145ea272375b0d0693110a3ce1a13dacace54c731b97329a73b4d9541aee8908a34b455946b7138fecd7ff8d86df31877ad1d8f52b490c2638feeca6c0baeef5e205d1d0802e2be8b5405c37c35aaeac1ce872166506a6765f8696110f52cfae0e63a413c550509e5eb941b02a74a42ee58170dbcec0feb794cceb49521ea4a50abba0&sermo=78614935-b91b-4f45-99b6-eddf8d7ebe91&putent_genus=0&obsecro_id=fc4d4643-8fe6-4f8f-8d62-73107ddc29d9&srp_versio=1]
+2020-07-07 23:38:42.347 DEBUG com.dukascopy.api.impl.connect.AuthorizationClient - << [{"M2":"f713a012ecdb361e06680e65893ee6c154704f97a2838ee2f3ede61764dcc38f","srp_versio":"1"}]
+2020-07-07 23:38:42.348 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - Auth step 2 response [ServerResponseObject [passwordServerResponse=Step2ServerResponse [serverEvidenceMessageM2=f713a012ecdb361e06680e65893ee6c154704f97a2838ee2f3ede61764dcc38f, srpProtocolVersion=1], ]]
+2020-07-07 23:38:42.349 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - Auth step 3 request
+2020-07-07 23:38:42.350 DEBUG com.dukascopy.api.impl.connect.AuthorizationClient - >> [https://login.dukascopy.com/authorization-1/demo/auth?munus=srp_api&passus=3&sermo=78614935-b91b-4f45-99b6-eddf8d7ebe91&versio=318.4.101&willPing=true&occasus_content_vulgate=0&putent_genus=0&occasus=true&platform=DDS3_JFOREXSDK&obsecro_id=fc4d4643-8fe6-4f8f-8d62-73107ddc29d9&srp_versio=1]
+2020-07-07 23:38:43.463 DEBUG com.dukascopy.api.impl.connect.AuthorizationClient - << [{"occasus":"rO0ABXNyABRqYXZhLnV0aWwuUHJvcGVydGllczkS0HpwNj6YAgABTAAIZGVmYXVsdHN0ABZMamF2\r\nYS91dGlsL1Byb3BlcnRpZX...","authApiURLs":["d-ja-gva-101-135-154.dukascopy.com:10443","d-ja-usa-e-96-4-a.dukascopy.com:10443","d-ja-sgn-04-b.dukascopy.com:10443","d-ja-jpn-102-100-c.dukascopy.com:10443","d-ja-hk-110-05.dukascopy.online:10443","d-ja-msk-10.dukascopy.com:10443","d-ja-hk-111-4.dukascopy.online:10443"],"srp_versio":"1"}]
+2020-07-07 23:38:43.478 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - Auth step 3 response [ServerResponseObject [passwordServerResponse=Step3ServerResponse [serverResponse={"occasus":"rO0ABXNyABRqYXZhLnV0aWwuUHJvcGVydGllczkS0HpwNj6YAgABTAAIZGVmYXVsdHN0ABZMamF2\r\nYS91dGlsL1Byb3BlcnRpZX...","authApiURLs":["d-ja-gva-101-135-154.dukascopy.com:10443","d-ja-usa-e-96-4-a.dukascopy.com:10443","d-ja-sgn-04-b.dukascopy.com:10443","d-ja-jpn-102-100-c.dukascopy.com:10443","d-ja-hk-110-05.dukascopy.online:10443","d-ja-msk-10.dukascopy.com:10443","d-ja-hk-111-4.dukascopy.online:10443"],"srp_versio":"1"}], responseHeaderFields={Transfer-Encoding=[chunked], null=[HTTP/1.1 200], idle-session-ttl=[900000], CF-RAY=[5af4b5857a9cfc8d-FCO], Server=[cloudflare], Connection=[keep-alive], Client-Country=[IT], Pragma=[no-cache], Last-Modified=[Tue, 07 Jul 2020 21:37:51 GMT], Date=[Tue, 07 Jul 2020 21:37:51 GMT], CF-Cache-Status=[DYNAMIC], Cache-Control=[no-cache, must-revalidate, no-store, max-age=0], Access-Control-Allow-Credentials=[true], Client-IP=[151.64.131.216], Vary=[Accept-Encoding], Set-Cookie=[__cfduid=dc1a347f064873bc62b6cc60c59ae8a8e1594157870; expires=Thu, 06-Aug-20 21:37:50 GMT; path=/; domain=.dukascopy.com; HttpOnly; SameSite=Lax], Expires=[Thu, 01 Jan 1970 00:00:00 GMT], Expect-CT=[max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"], cf-request-id=[03cccfc7690000fc8d76afe200000001], Content-Type=[text/plain;charset=UTF-8]}]]
+2020-07-07 23:38:45.284 INFO  com.dukascopy.api.impl.connect.AuthorizationClient - APIC: Ping API server URLs synchronously
+2020-07-07 23:38:45.287 INFO  com.dukascopy.api.impl.connect.PingHelper - Selecting the best server...
+2020-07-07 23:38:45.834 INFO  com.dukascopy.api.impl.connect.PingHelper - The ping start time=2020-07-07 23:38:45:833
+2020-07-07 23:38:46.328 INFO  com.dukascopy.api.impl.connect.PingHelper - The ping end time=2020-07-07 23:38:46:327, the ping processing time=[494]ms
+2020-07-07 23:38:46.328 DEBUG com.dukascopy.api.impl.connect.PingHelper - Best api url [d-ja-gva-101-135-154.dukascopy.com:10443] with time [178]
+2020-07-07 23:38:46.332 INFO  com.dukascopy.dds2.greed.ping.ApiServerManager - APIC: The ping is finished, the fastest API server is saved: d-ja-gva-101-135-154.dukascopy.com:10443 (178 ms)
+2020-07-07 23:38:46.332 DEBUG com.dukascopy.api.impl.connect.TesterClientImpl - d-ja-gva-101-135-154.dukascopy.com:10443@e4778d319d2db4879512e54f6469f4896546e893eb25dfc67aef4c573519b745
+2020-07-07 23:38:46.341 INFO  com.dukascopy.dds2.greed.util.FilePathManager - WL info is unavailable. Use default App folder for Platform data:  C:\Users\ariccini\AppData\Local\JForex
+2020-07-07 23:38:46.631 WARN  com.dukascopy.charts.data.datacache.FeedDataProvider - JStore is disabled for the current user
+2020-07-07 23:38:46.655 DEBUG com.dukascopy.api.impl.connect.TesterClientImpl - UserAgent: {"clientType":"DDS3_JFOREXSDK","javaVersion":"1.8.0_241","jvmVersion":"25.241-b07","clientVersion":"318.4.101","osName":"Windows 10"}
+2020-07-07 23:38:51.602 INFO  com.dukascopy.dds2.greed.connection.GreedClientAuthorizationProvider - !!!:Thread[(NettyTransportClient-0) ClientConnector,6,main]
+2020-07-07 23:38:51.605 INFO  com.dukascopy.dds4.transport.client.netty.ClientConnector - Authorize task in queue, server address [d-ja-gva-101-135-154.dukascopy.com/194.8.15.154:10443], transport name [NettyTransportClient-0]
+2020-07-07 23:38:51.606 DEBUG com.dukascopy.api.impl.connect.TesterClientImpl - Authorized
+2020-07-07 23:38:51.626 INFO  com.dukascopy.api.instrument.subscribe.InstrumentManager - InstrumentManager created.
+2020-07-07 23:38:51.665 ERROR com.dukascopy.charts.data.datacache.time.TimeManager - Failed to log server time loaded
+java.lang.NullPointerException
+	at com.dukascopy.charts.data.datacache.time.TimeManager.logServerTimeLoaded(TimeManager.java:385)
+	at com.dukascopy.charts.data.datacache.time.TimeManager.requestServerTime(TimeManager.java:366)
+	at com.dukascopy.charts.data.datacache.time.TimeManager.access$400(TimeManager.java:42)
+	at com.dukascopy.charts.data.datacache.time.TimeManager$4.run(TimeManager.java:286)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-07 23:38:52.295 WARN  com.dukascopy.api.impl.connect.WLabelData - White Label Image is not received
+2020-07-07 23:38:52.296 INFO  jforex.tester.client.gui.TesterMainGUIMode - Connected
+2020-07-07 23:38:52.299 INFO  jforex.tester.client.gui.TesterClientRunner - from: 2019/01/16 00:00:00 to: 2020/07/07 23:00:00
+2020-07-07 23:38:52.300 INFO  jforex.tester.client.gui.TesterClientRunner - Subscribing instruments...
+2020-07-07 23:38:52.480 INFO  jforex.tester.client.gui.TesterClientRunner - Downloading data
+2020-07-07 23:38:52.496 INFO  com.dukascopy.charts.data.datacache.metadata.FeedMetadataManager - Loading first times for [EUR/USD]...
+2020-07-07 23:38:52.540 INFO  com.dukascopy.charts.data.datacache.metadata.FeedMetadataManager - First times loaded {EUR/USD={Ticks=1052082000914, 1 Min=1052082000000, Hourly=1052082000000, Daily=99792000000}}
+2020-07-07 23:38:57.216 INFO  jforex.tester.client.gui.TesterClientRunner - Starting strategy
+2020-07-07 23:38:57.355 ERROR com.dukascopy.charts.data.datacache.time.TimeManager - Failed to log server time loaded
+java.lang.NullPointerException
+	at com.dukascopy.charts.data.datacache.time.TimeManager.logServerTimeLoaded(TimeManager.java:385)
+	at com.dukascopy.charts.data.datacache.time.TimeManager.requestServerTime(TimeManager.java:366)
+	at com.dukascopy.charts.data.datacache.time.TimeManager.access$400(TimeManager.java:42)
+	at com.dukascopy.charts.data.datacache.time.TimeManager$4.run(TimeManager.java:286)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-07 23:38:58.699 INFO  jforex.tester.client.gui.TesterMainGUIMode - Strategy started: 0
+2020-07-07 23:38:58.701 INFO  jforex.tester.client.gui.TesterClientRunner - Getting prices before start time
+2020-07-07 23:38:58.750 INFO  jforex.tester.client.gui.TesterClientRunner - Creating data loading threads
+2020-07-07 23:38:58.763 INFO  jforex.tester.client.gui.TesterClientRunner - Getting prices before start time
+2020-07-07 23:38:58.861 WARN  com.dukascopy.api.impl.connect.WLabelData - White Label Image is not received
+2020-07-07 23:38:58.890 INFO  jforex.tester.client.gui.TesterClientRunner - Filling in-progress candles
+2020-07-07 23:38:58.912 INFO  jforex.tester.client.gui.TesterClientRunner - Executing onStart
+2020-07-07 23:38:58.936 INFO  jforex.tester.client.gui.TesterClientRunner - Running
+2020-07-07 23:39:06.291 ERROR com.dukascopy.dds2.greed.agent.strategy.tester.StrategyTesterRunner - 
+java.lang.NullPointerException
+	at tz.reteneurale.Rete.shift(Rete.java:267)
+	at singlejartest.MA_Play.onBar(MA_Play.java:125)
+	at com.dukascopy.dds2.greed.agent.strategy.tester.AbstractStrategyRunner.historicalCandleReceived(AbstractStrategyRunner.java:508)
+	at com.dukascopy.dds2.greed.agent.strategy.tester.AbstractStrategyRunner.historyDataReceived(AbstractStrategyRunner.java:353)
+	at com.dukascopy.dds2.greed.agent.strategy.tester.StrategyTesterRunner.run(StrategyTesterRunner.java:307)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-07 23:39:06.296 ERROR com.dukascopy.dds2.greed.agent.strategy.tester.start.DefaultStrategyExceptionHandler - Exception thrown while running onBar method: null
+java.lang.NullPointerException
+	at tz.reteneurale.Rete.shift(Rete.java:267)
+	at singlejartest.MA_Play.onBar(MA_Play.java:125)
+	at com.dukascopy.dds2.greed.agent.strategy.tester.AbstractStrategyRunner.historicalCandleReceived(AbstractStrategyRunner.java:508)
+	at com.dukascopy.dds2.greed.agent.strategy.tester.AbstractStrategyRunner.historyDataReceived(AbstractStrategyRunner.java:353)
+	at com.dukascopy.dds2.greed.agent.strategy.tester.StrategyTesterRunner.run(StrategyTesterRunner.java:307)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-07 23:39:06.327 INFO  jforex.tester.client.gui.TesterMainGUIMode - Strategy stopped: 0

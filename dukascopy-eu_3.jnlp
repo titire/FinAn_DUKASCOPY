@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<jnlp spec="1.8+" codebase="https://dukascopy-eu.cdn.online-trading-solutions.com/demo_3/" href="https://dukascopy-eu.cdn.online-trading-solutions.com/demo_3/dukascopy-eu_3.jnlp">
+    <information>
+        <title>JForex</title>
+        <vendor>Dukascopy Europe IBS AS</vendor>
+        <description kind="one-line">JForex</description>
+        <description kind="short">JForex</description>
+        <description kind="tooltip">JForex</description>
+        <icon href="images/logo/dukascopy-eu_48x48.png"/>
+    </information>
+    <shortcut online="true" install="true">
+        <desktop/>
+        <menu submenu="Jforex"/>
+    </shortcut>
+    <security>
+        <all-permissions/>
+    </security>
+    <update check="timeout" policy="always"/>
+    <platform-res>
+        <property name="jnlp.platform.logo.url" value="images/logo/dukascopy-eu_32x32.png"/>
+        <property name="jnlp.company.logo.url" value="images/dukascopy-eu.png"/>
+    </platform-res>
+    <resources>
+        <java version="1.8+" java-vm-args="-Xmx512m -Xms32m"/>
+        <property name="jnlp.platform.mode" value="jforex"/>
+        <property name="jnlp.client.mode" value="DEMO"/>
+        <property name="jnlp.white.label.href" value="https://dukascopy-eu.cdn.online-trading-solutions.com/demo_3/dukascopy-eu_3.jnlp"/>
+        <property name="jnlp.packEnabled" value="True"/>
+        <property name="sun.java2d.d3d" value="false"/>
+        <property name="jnlp.platform.name" value="JForex"/>
+        <property name="java.net.preferIPv4Stack" value="true"/>
+        <property name="jnlp.href" value="dukascopy-eu_3.jnlp" />
+        <property name="jnlp.localize.reg.form.url" value="true"/>
+        <property name="jnlp.login.url" value="https://login.dukascopy.com/authorization-1/demo,https://login.online-trading-solutions.com/authorization-1/demo,https://login.dukascopy.com/authorization-2/demo"/>
+        <property name="jnlp.srp6.login.url" value="https://login.dukascopy.com/authorization-1/demo,https://login.online-trading-solutions.com/authorization-1/demo,https://login.dukascopy.com/authorization-2/demo"/>
+        <property name="jnlp.register.new.demo.url" value="https://eu-demo.dukascopy.com/fo/register/demo"/>
+        <property name="jnlp.open.live.url" value="https://eu-live.dukascopy.com/rto"/>
+        <property name="jnlp.forgotten.url" value="https://eu-demo.dukascopy.com/fo/password/forgot/"/>
+        <extension name="AppFramework" href="https://dukascopy-eu.cdn.online-trading-solutions.com/demo_3/dukascopy-eu-libs_3.jnlp"/>
+    <property name="jnlp.pinhmtlcut" value="true"/></resources>
+    <application-desc main-class="com.dukascopy.dds2.greed.GreedClient"/>
+</jnlp>
+
