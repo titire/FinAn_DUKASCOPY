@@ -9,7 +9,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.dukascopy.dds2</groupId>
 	<artifactId>JForex-3-SDK</artifactId>
-        <version>3.6.19</version>
+        <version>3.6.34</version>
 	<organization>
 		<name>Dukascopy Bank SA</name>
 		<url>http://www.dukascopy.com</url>
@@ -23,8 +23,8 @@
 	</repositories>
 
     <properties>
-        <com.dukascopy.api.version>2.13.90</com.dukascopy.api.version>
-        <com.dukascopy.jclient.version>3.6.19</com.dukascopy.jclient.version>
+        <com.dukascopy.api.version>2.13.98</com.dukascopy.api.version>
+        <com.dukascopy.jclient.version>3.6.37</com.dukascopy.jclient.version>
     </properties>
 
 	<dependencies>
@@ -42,8 +42,8 @@
 			<!-- find the latest available version here:
                 http://www.dukascopy.com/client/jforexlib/publicrepo/com/dukascopy/api/JForex-API/
             -->
-            <version>${com.dukascopy.api.version}</version>
-			<classifier>sources</classifier>
+            <version>2.13.90</version>
+		 <type>jar</type>
 		</dependency>
 	</dependencies>
 	<build>

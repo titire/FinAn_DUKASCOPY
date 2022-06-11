@@ -4,7 +4,7 @@
 
 package singlejartest;
 
-import Common.ContenitoreDati;
+import Common.Sostituire.ContenitoreDati;
 import com.dukascopy.api.*;
 import java.io.File;
 import java.io.FileWriter;

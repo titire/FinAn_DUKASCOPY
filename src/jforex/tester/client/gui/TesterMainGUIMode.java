@@ -30,6 +30,7 @@
 package jforex.tester.client.gui;
 
 import Common.AppProperties;
+import static Common.AppProperties.getAppProperties;
 import com.dukascopy.api.system.ISystemListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,9 +49,6 @@ import singlejartest.MA_Play_Derivate;
 public class TesterMainGUIMode {
     private static final Logger LOGGER = LoggerFactory.getLogger(TesterMainGUIMode.class);
 
-    private static String jnlpUrl = "http://platform.dukascopy.com/demo/jforex.jnlp";
-    private static String userName = AppProperties.userName;
-    private static String password = AppProperties.Password;
     private static String reportFileName = "report.html";
     private static Instrument instrument = Instrument.EURUSD;
 
@@ -67,9 +65,10 @@ public class TesterMainGUIMode {
         Runnable r = new Runnable() {
             public void run() {
                 try {
-                    testerClientRunner.start(jnlpUrl,
-                            userName,
-                            password,
+                    testerClientRunner.start(
+                            getAppProperties().getProperty("DUKASCOPY_JNLP_URL"),
+                            getAppProperties().getProperty("DUKASCOPY_USERNAME"),
+                            getAppProperties().getProperty("DUKASCOPY_PASSWORD"),
                             instrument,
                             myTesterWindow,
                             myTesterWindow,

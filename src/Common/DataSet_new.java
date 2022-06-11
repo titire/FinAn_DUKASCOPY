@@ -5,6 +5,7 @@
  */
 package Common;
 
+import Common.Sostituire.ContenitoreDati;
 import com.dukascopy.api.IBar;
 import com.dukascopy.api.Period;
 import java.io.FileInputStream;
@@ -13,8 +14,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.RandomAccessFile;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -27,20 +30,95 @@ public class DataSet_new implements Serializable {
     public Period P;
     public String Asset;
     
-    DataSet_new(Period P, String ASSET ){
+    public RandomAccessFile RAF;
+    // single line size
+    // timestamp long    8 bytes
+    // ASK
+    // volume double     8 bytes
+    // open double
+    // min  double
+    // max  double
+    // close double 
+    // BID
+    // volume
+    // open double
+    // min  double
+    // max  double
+    // close double 
+    //  totale = 8 + 5 * 8 + 5 * 8 = 88 bytes
+    
+    public final int recordSize = 88; // bytes
+    private HashMap<Long,Long> index;    // della forma Timestamp --> Posizione nel file
+    
+    
+    DataSet_new(Period P, String ASSET ) throws FileNotFoundException, IOException{
         this.P = P;
-        this.Asset = Asset;
+        this.Asset = ASSET;
         TimeStamp = new ArrayList();
         AskBars = new ArrayList();
         BidBars = new ArrayList();
+        
+        RAF = new RandomAccessFile(this.Asset + "_" + this.P.toString() + ".dat", "rw");
+        generateIndex();
     }
+    
+    private void generateIndex() throws IOException{
+        index = new HashMap();
+        long seek = 0;
+        if ( RAF.length() > 0 ){
+            while(seek < RAF.length()){
+                RAF.seek(seek);
+                index.put(RAF.readLong(), seek);
+                seek += recordSize;
+            }
+        }
+    }
+    
     
     // database // TODO
     //public void connectDatabase(){
         
     //}
-    public void insertIntoDatabase(IBar AskBar, IBar BidBar){
-        
+    private long currentSeek;
+    private Barra currentAskBar;
+    private Barra currentBidBar;
+    
+    private void readBars(long seek) throws IOException{
+        RAF.seek(seek);
+        currentSeek = seek;
+        long TS = RAF.readLong();
+        currentAskBar = new Barra(TS, RAF.readDouble(), RAF.readDouble(),RAF.readDouble(),RAF.readDouble(),RAF.readDouble());
+        currentBidBar = new Barra(TS, RAF.readDouble(), RAF.readDouble(),RAF.readDouble(),RAF.readDouble(),RAF.readDouble());
+    }
+    private void writeBars(long seek, Barra askBar, Barra bidBar) throws IOException{
+        RAF.seek(seek);
+    // ASK
+        RAF.writeLong(askBar.TS);
+        RAF.writeDouble(askBar.Volume);
+        RAF.writeDouble(askBar.Open);
+        RAF.writeDouble(askBar.Low);
+        RAF.writeDouble(askBar.High);
+        RAF.writeDouble(askBar.Close);
+    // BID
+        RAF.writeDouble(bidBar.Volume);
+        RAF.writeDouble(bidBar.Open);
+        RAF.writeDouble(bidBar.Low);
+        RAF.writeDouble(bidBar.High);
+        RAF.writeDouble(bidBar.Close);
+    }
+    public void insertIntoDatabase(IBar AskBar, IBar BidBar) throws IOException{
+        Barra askBar = new Barra(AskBar);
+        Barra bidBar = new Barra(BidBar);
+        if(index.containsKey(AskBar.getTime())){
+            readBars(index.get(AskBar.getTime()));
+            if ( ! currentAskBar.isEqual(askBar) || ! currentBidBar.isEqual(bidBar) ){
+                this.writeBars(currentSeek, askBar, bidBar);
+            }
+        }
+        else{
+            index.put(askBar.TS, RAF.length());
+            this.writeBars(RAF.length(), askBar, bidBar);
+        }
     }
     
     public void addDataSetElement(IBar AskBar, IBar BidBar) throws Exception{
@@ -73,10 +151,28 @@ public class DataSet_new implements Serializable {
         insertIntoDatabase(AskBar, BidBar);
     }
     
-    public void getAskBarAt(long Timestamp, Period P){
+    public Barra getAskBarAt(long Timestamp, Period P) throws Exception{
         if ( P.isSmallerThan(this.P) ){
             throw new Exception("Impossible to get a bar of period " + P.toString() + " from data with period " + this.P.toString());
         }
+        // getting lower limit of the 
+        if ( P.getInterval() = this.P.getInterval()){
+            
+            return this.AskBars.
+        }
+        long LowerLimit = Math.round((double)Timestamp / (double)P.getInterval())*P.getInterval();
+        long UpperLimit = LowerLimit + P.getInterval();
+        long tempo=LowerLimit;
+        
+        
+        
+        Barra OUT = new Barra();
+        OUT.TS = LowerLimit;
+        while(tempo <= UpperLimit){
+            getAskBar
+        }
+        
+        
         
     }
     // Metodi di serializzazione/deserializzazione
